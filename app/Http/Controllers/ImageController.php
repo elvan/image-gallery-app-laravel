@@ -5,13 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ImageRequest;
 use App\Models\Image;
-use Illuminate\Http\Request;
 
 class ImageController extends Controller
 {
     public function index()
     {
-        $images = Image::published()->latest()->paginate(15);
+        $images = Image::published()->latest()->paginate(15)->withQueryString();
 
         return view('image.index', compact('images'));
     }
