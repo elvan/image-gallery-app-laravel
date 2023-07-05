@@ -21,7 +21,7 @@
             <a class="navbar-brand" href="/">
                 <x-icon src="logo.svg" alt="" width="30" height="24"
                     class="d-inline-block align-text-top color-light" />
-                Larapics
+                ImageGallery
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -32,7 +32,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
-
+                    <li class="nav-item"><a href="{{ route('images.index') }}"
+                            class="nav-link {{ request()->is('account/images*') ? 'active' : '' }}">Images</a></li>
+                    <li class="nav-item"><a href="#"
+                            class="nav-link {{ request()->is('account/favorites*') ? 'active' : '' }}">Favorites</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -80,8 +84,8 @@
             <p class="float-end mb-1">
                 <a href="#" class="text-decoration-none">Back to top</a>
             </p>
-            <p>Larapics provides beautiful, high quality & royalty free photos shared by creators everywhere.</p>
-            <p>&copy; 2022 Larapics</p>
+            <p>ImageGallery provides beautiful, high quality & royalty free photos shared by creators everywhere.</p>
+            <p>&copy; 2022 ImageGallery</p>
         </div>
     </footer>
 
@@ -92,7 +96,6 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async>
     </script> --}}
-
 </body>
 
 </html>
