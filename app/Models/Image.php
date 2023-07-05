@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Image extends Model
 {
@@ -69,6 +69,10 @@ class Image extends Model
                 $image->slug = $image->getSlug();
                 $image->is_published = true;
             }
+        });
+
+        static::deleted(function ($image) {
+            Storage::delete($image->file);
         });
     }
 }
