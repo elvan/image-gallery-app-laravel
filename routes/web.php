@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ListImageController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ShowAuthorController;
 use App\Http\Controllers\ShowImageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +24,7 @@ Auth::routes();
 
 Route::get('/', ListImageController::class)->name('images.all');
 Route::get('/images/{image}', ShowImageController::class)->name('images.show');
+Route::get('/@{user:username}', ShowAuthorController::class)->name('author.show');
 Route::resource('/account/images', ImageController::class)->except('show');
 Route::get('/account/settings', [SettingController::class, 'edit'])->name('settings.edit');
 Route::put('/account/settings', [SettingController::class, 'update'])->name('settings.update');
