@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\Role;
 use App\Models\Image;
+use App\Models\Social;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -47,6 +48,11 @@ class User extends Authenticatable
     public function images()
     {
         return $this->hasMany(Image::class);
+    }
+
+    public function social()
+    {
+        return $this->hasOne(Social::class);
     }
 
     public function getImagesCount()
