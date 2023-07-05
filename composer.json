@@ -12,7 +12,8 @@
         "guzzlehttp/guzzle": "^7.7.0",
         "laravel/framework": "^v9.52.10",
         "laravel/sanctum": "^v3.2.5",
-        "laravel/tinker": "^v2.8.1"
+        "laravel/tinker": "^v2.8.1",
+        "laravel/ui": "^v4.2.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^v3.8.1",

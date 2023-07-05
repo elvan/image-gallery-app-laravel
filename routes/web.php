@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', [ImageController::class, 'index'])->name('images.index');
 Route::get('/images/{image}', [ImageController::class, 'show'])->name('images.show');
 Route::get('/images', [ImageController::class, 'create'])->name('images.create');
@@ -23,3 +27,5 @@ Route::put('/images/{image}', [ImageController::class, 'update'])->name('images.
 Route::delete('/images/{image}', [ImageController::class, 'destroy'])->name('images.destroy');
 
 Route::view('/test-blade', 'test');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
