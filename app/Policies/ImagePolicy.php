@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Enums\Role;
 use App\Models\Image;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -53,7 +54,7 @@ class ImagePolicy
      */
     public function update(User $user, Image $image)
     {
-        return true;
+        return $user->id === $image->user_id || $user->role === Role::Editor;
     }
 
     /**
@@ -65,7 +66,7 @@ class ImagePolicy
      */
     public function delete(User $user, Image $image)
     {
-        return true;
+        return $user->id === $image->user_id;
     }
 
     /**
@@ -77,7 +78,7 @@ class ImagePolicy
      */
     public function restore(User $user, Image $image)
     {
-        return true;
+        //
     }
 
     /**
@@ -89,6 +90,6 @@ class ImagePolicy
      */
     public function forceDelete(User $user, Image $image)
     {
-        return true;
+        //
     }
 }

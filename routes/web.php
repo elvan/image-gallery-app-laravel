@@ -22,10 +22,10 @@ Route::get('/', [ImageController::class, 'index'])->name('images.index');
 Route::get('/images/{image}', [ImageController::class, 'show'])->name('images.show');
 Route::get('/images', [ImageController::class, 'create'])->name('images.create');
 Route::post('/images', [ImageController::class, 'store'])->name('images.store');
-Route::get('/images/{image}/edit', [ImageController::class, 'edit'])->name('images.edit');
+Route::get('/images/{image}/edit', [ImageController::class, 'edit'])->name('images.edit'); //->can('update', 'image');
 Route::put('/images/{image}', [ImageController::class, 'update'])->name('images.update');
 Route::delete('/images/{image}', [ImageController::class, 'destroy'])->name('images.destroy');
 
 Route::view('/test-blade', 'test');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
