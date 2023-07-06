@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateCommentRequest;
 use App\Models\Comment;
 use App\Models\Image;
+use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
@@ -22,6 +23,16 @@ class CommentController extends Controller
             ->paginate(10);
 
         return view('comments.index', compact('comments'));
+    }
+
+    public function update(Comment $comment, Request $request)
+    {
+        $comment->approved = $request->approved == 1;
+        $comment->update();
+
+        return back()
+            ->with('updated', $comment->id)
+            ->with('message', "Comment has been " . ($comment->approved ? "approved" : "unapproved"));
     }
 
     public function store(Image $image, CreateCommentRequest $request)
