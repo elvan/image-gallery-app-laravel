@@ -6,7 +6,13 @@
                     <img src="{{ $image->fileUrl() }}" title="{{ $image->title }}" class="img-fluid" />
                 </div>
 
-                @include('_comments')
+                @auth
+                    @include('_comments')
+                @else
+                    <p class="text-muted mt-3">
+                        <a href="{{ route('login') }}">Sign in</a> to leave a comment.
+                    </p>
+                @endauth
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center mb-3">
