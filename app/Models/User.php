@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\Role;
+use App\Models\Comment;
 use App\Models\Image;
 use App\Models\Setting;
 use App\Models\Social;
@@ -113,6 +114,11 @@ class User extends Authenticatable
     public function images()
     {
         return $this->hasMany(Image::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     public function social()
