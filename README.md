@@ -1,3 +1,45 @@
+# Image Gallery
+
+![Home Page Images](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20213757.png)
+*Home Page Images*
+
+---
+
+![Single Image Page](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20213952.png)
+*Image Page*
+
+---
+
+![Add New Image](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20213905.png)
+*Add New Image*
+
+---
+
+![Edit Image Caption](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20213920.png)
+*Edit Image Caption*
+
+---
+
+![Comments Moderation Page](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20213935.png)
+*Comments Moderation Page*
+
+---
+
+![User Settings Page](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20214012.png)
+*User Settings Page*
+
+---
+
+![User Register Page](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20214030.png)
+*User Register Page*
+
+---
+
+![User Login Page](https://raw.githubusercontent.com/elvan/image-gallery-app-laravel/main/_screenshots/Screenshot%202023-07-24%20214042.png)
+*User Login Page*
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
