@@ -88,7 +88,7 @@
                 <a href="#" class="text-decoration-none">Back to top</a>
             </p>
             <p>ImageGallery provides beautiful, high quality & royalty free photos shared by creators everywhere.</p>
-            <p>&copy; 2022 ImageGallery</p>
+            <p>&copy; 2023 ImageGallery</p>
         </div>
     </footer>
 
